@@ -6,8 +6,9 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About — ZamPOS</title>
-        <meta name="description" content="ZamPOS is a Bitcoin Lightning point-of-sale system built for Zambian merchants." />
+        <title>About — ZamPOS | Bitcoin Lightning for Zambian Merchants</title>
+        <meta name="description" content="ZamPOS is a Bitcoin Lightning point-of-sale system built for Zambian merchants. Direct to your wallet. No bank account needed." />
+        <meta name="keywords" content="ZamPOS, Simeon Mwale, Bitcoin Zambia, Lightning payments" />
       </Head>
 
       <Nav />
@@ -21,7 +22,7 @@ export default function About() {
             <span style={{ color: 'var(--orange)' }}>for everyday Zambians</span>
           </h1>
           <p style={{ fontSize: 18, color: 'rgba(250,250,248,0.5)', lineHeight: 1.7 }}>
-            ZamPOS was built by <strong style={{ color: 'var(--white)' }}>Simeon Mwale</strong> — a Zambian developer and Computer Science student at DMI St. Eugene University in Lusaka. He saw a clear gap: market vendors, tuck shop owners, and small business operators had no low-cost way to accept digital payments without a bank account.
+            ZamPOS was built by <strong style={{ color: 'var(--white)' }}>Simeon Mwale</strong> — a Zambian developer and Computer Science student at DMI St. Eugene University in Lusaka. He saw a clear gap: market vendors, tuck shop owners, and small business operators had no low-cost way to accept digital payments directly to their wallets without a bank account.
           </p>
         </div>
       </section>
@@ -37,7 +38,7 @@ export default function About() {
             {
               label: 'The Solution',
               title: 'Lightning-fast, low-cost, and simple',
-              body: `ZamPOS uses the Bitcoin Lightning Network — a payment layer on top of Bitcoin that enables instant, near-zero-fee transactions. Merchants register with just a phone number, accept payments in Kwacha (converted automatically), and receive SMS confirmations without needing a smartphone.`,
+              body: `ZamPOS uses the Bitcoin Lightning Network — a payment layer on top of Bitcoin that enables instant, near-zero-fee transactions. Merchants register with just a phone number and their Lightning wallet, accept payments in Kwacha (converted automatically), and receive SMS confirmations — all with funds going directly to their own wallet.`,
             },
             {
               label: 'The Vision',
@@ -81,7 +82,7 @@ export default function About() {
               >GitHub →</a>
             </div>
           </div>
-          <style>{`@media (max-width: 560px) { div[style*="grid-template-columns: auto 1fr"] { grid-template-columns: 1fr !important; } }`}</style>
+          <style>{`@media (max-width: 560px) { div[style*="grid-template-columns: auto 1fr"] { grid-template-columns: 1fr !important; text-align: center; } }`}</style>
         </div>
       </section>
 
@@ -91,7 +92,7 @@ export default function About() {
           <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 32, letterSpacing: '-0.03em', color: 'var(--black)', marginBottom: 48 }}>What we believe</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
             {[
-              { icon: '🏛️', value: 'Financial Sovereignty', desc: 'Everyone has the right to control their own money.' },
+              { icon: '🏛️', value: 'Financial Sovereignty', desc: 'Everyone has the right to control their own money, directly in their own wallet.' },
               { icon: '🔗', value: 'Open Infrastructure', desc: 'Built on Bitcoin — the most open payment network in the world.' },
               { icon: '🇿🇲', value: 'Local Context', desc: 'Tools should be designed for the people who use them.' },
               { icon: '📉', value: 'Low Barriers', desc: 'Technology should be accessible, not a luxury.' },
@@ -103,6 +104,16 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Coming Soon Section */}
+      <section style={{ padding: '60px 24px', background: 'var(--orange-light)' }}>
+        <div style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 18, color: 'var(--orange)', marginBottom: 8 }}>🔜 Coming Soon</h3>
+          <p style={{ fontSize: 14, color: 'var(--gray-600)' }}>
+            Custodial wallets, auto-sweeps, and more features are in development. Stay tuned!
+          </p>
         </div>
       </section>
 

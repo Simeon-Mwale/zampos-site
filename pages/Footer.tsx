@@ -21,21 +21,42 @@ export default function Footer() {
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 17, letterSpacing: '-0.02em' }}>ZamPOS</span>
             </div>
             <p style={{ fontSize: 13, color: 'rgba(250,250,248,0.45)', lineHeight: 1.7, maxWidth: 200 }}>
-              Bitcoin Lightning point-of-sale for Zambian merchants.
+              Bitcoin Lightning point-of-sale for Zambian merchants. Direct to your wallet.
             </p>
             <div style={{ display: 'flex', gap: 10, marginTop: 20 }}>
-              {['T', 'W', 'G'].map((icon, i) => (
-                <a key={i} href="#" style={{
-                  width: 32, height: 32, borderRadius: 8,
-                  background: 'rgba(250,250,248,0.08)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 12, fontWeight: 600, color: 'rgba(250,250,248,0.5)',
-                  transition: 'background 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.background = 'rgba(247,147,26,0.2)'}
-                onMouseLeave={e => e.currentTarget.style.background = 'rgba(250,250,248,0.08)'}
-                >{icon}</a>
-              ))}
+              <a href="https://t.me/ZedSats" target="_blank" rel="noreferrer" style={{
+                width: 32, height: 32, borderRadius: 8,
+                background: 'rgba(250,250,248,0.08)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 12, fontWeight: 600, color: 'rgba(250,250,248,0.5)',
+                transition: 'background 0.2s',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(247,147,26,0.2)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'rgba(250,250,248,0.08)'}
+              >📱</a>
+              <a href="https://x.com/ZedSats" target="_blank" rel="noreferrer" style={{
+                width: 32, height: 32, borderRadius: 8,
+                background: 'rgba(250,250,248,0.08)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 12, fontWeight: 600, color: 'rgba(250,250,248,0.5)',
+                transition: 'background 0.2s',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(247,147,26,0.2)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'rgba(250,250,248,0.08)'}
+              >🐦</a>
+              <a href="https://github.com/Simeon-Mwale/zampos" target="_blank" rel="noreferrer" style={{
+                width: 32, height: 32, borderRadius: 8,
+                background: 'rgba(250,250,248,0.08)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 12, fontWeight: 600, color: 'rgba(250,250,248,0.5)',
+                transition: 'background 0.2s',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(247,147,26,0.2)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'rgba(250,250,248,0.08)'}
+              >💻</a>
             </div>
           </div>
 
@@ -43,7 +64,7 @@ export default function Footer() {
           <div>
             <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(250,250,248,0.3)', textTransform: 'uppercase', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>Product</p>
             {[['/#features', 'Features'], ['/merchants', 'For Merchants'], ['/pricing', 'Pricing'], ['https://zampos.vercel.app', 'Launch App']].map(([href, label]) => (
-              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s' }}
+              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s', textDecoration: 'none' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--orange)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(250,250,248,0.5)'}
               >{label}</Link>
@@ -54,18 +75,18 @@ export default function Footer() {
           <div>
             <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(250,250,248,0.3)', textTransform: 'uppercase', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>Community</p>
             {[['/community', 'ZedSats'], ['/blog', 'Blog'], ['/support', 'Support'], ['https://t.me/ZedSats', 'Telegram']].map(([href, label]) => (
-              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s' }}
+              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s', textDecoration: 'none' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--orange)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(250,250,248,0.5)'}
               >{label}</Link>
             ))}
           </div>
 
-          {/* Legal */}
+          {/* Company */}
           <div>
-            <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(250,250,248,0.3)', textTransform: 'uppercase', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>Legal</p>
-            {[['/terms', 'Terms of Service'], ['/privacy', 'Privacy Policy'], ['/about', 'About']].map(([href, label]) => (
-              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s' }}
+            <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(250,250,248,0.3)', textTransform: 'uppercase', marginBottom: 16, fontFamily: 'var(--font-mono)' }}>Company</p>
+            {[['/about', 'About'], ['/terms', 'Terms of Service'], ['/privacy', 'Privacy Policy']].map(([href, label]) => (
+              <Link key={href} href={href} style={{ display: 'block', fontSize: 14, color: 'rgba(250,250,248,0.5)', marginBottom: 10, transition: 'color 0.2s', textDecoration: 'none' }}
                 onMouseEnter={e => e.currentTarget.style.color = 'var(--orange)'}
                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(250,250,248,0.5)'}
               >{label}</Link>
@@ -75,7 +96,7 @@ export default function Footer() {
 
         <div style={{ borderTop: '1px solid rgba(250,250,248,0.08)', paddingTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <p style={{ fontSize: 13, color: 'rgba(250,250,248,0.3)' }}>
-            © 2026 ZamPOS. Empowering Zambian merchants with Bitcoin Lightning.
+            © 2026 ZamPOS. A ZamLink Technologies company. Empowering Zambian merchants with Bitcoin Lightning.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#22c55e', display: 'inline-block', animation: 'pulse-dot 2s ease infinite' }} />

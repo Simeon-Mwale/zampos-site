@@ -7,7 +7,7 @@ import Footer from './Footer'
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://zampos.onrender.com'
 
 function Ticker() {
-  const items = ['⚡ Bitcoin Lightning', '🇿🇲 Built for Zambia', '💬 SMS Confirmations', '🔒 No Chargebacks', '⚡ Instant Settlement', '0.5% Fee', '📱 Works on Any Phone']
+  const items = ['⚡ Bitcoin Lightning', '🇿🇲 Built for Zambia', '💬 SMS Confirmations', '🔒 No Chargebacks', '⚡ Instant Settlement', '0.5% Fee', '📱 Works on Any Phone', '💸 Direct to Your Wallet']
   const doubled = [...items, ...items]
   return (
     <div style={{ overflow: 'hidden', borderTop: '1px solid rgba(12,12,12,0.06)', borderBottom: '1px solid rgba(12,12,12,0.06)', background: 'var(--orange-light)', padding: '12px 0' }}>
@@ -36,12 +36,12 @@ export default function Home() {
     <>
       <Head>
         <title>ZamPOS — Bitcoin Lightning Payments for Zambia</title>
-        <meta name="description" content="Accept Bitcoin Lightning payments instantly. Zero bank account needed. SMS confirmations in Kwacha." />
-        <meta name="keywords" content="Bitcoin, Lightning, Zambia, POS, Payment, ZMW, Kwacha" />
+        <meta name="description" content="Accept Bitcoin Lightning payments instantly. Direct to your Lightning wallet. No bank account needed. SMS confirmations in Kwacha." />
+        <meta name="keywords" content="Bitcoin, Lightning, Zambia, POS, Payment, ZMW, Kwacha, Direct Wallet" />
         <meta property="og:title" content="ZamPOS — Bitcoin Lightning POS for Zambian Merchants" />
-        <meta property="og:description" content="Accept Bitcoin payments instantly. No bank account needed." />
+        <meta property="og:description" content="Accept Bitcoin payments directly to your Lightning wallet. No bank account needed." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zampos-site.vercel.app" />
+        <meta property="og:url" content="https://zampos.vercel.app" />
       </Head>
 
       <Nav />
@@ -97,7 +97,7 @@ export default function Home() {
           </h1>
 
           <p className="fade-up fade-up-2" style={{ fontSize: 'clamp(16px, 2vw, 20px)', color: 'var(--gray-500)', maxWidth: 520, lineHeight: 1.6, marginBottom: 40 }}>
-            No bank account needed. Instant settlement. SMS confirmation in Kwacha. Built for Zambian market vendors.
+            Direct to your Lightning wallet. No bank account needed. Instant settlement. SMS confirmation in Kwacha.
           </p>
 
           <div className="fade-up fade-up-3" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -133,7 +133,7 @@ export default function Home() {
 
           {/* Trust badges */}
           <div className="fade-up fade-up-4" style={{ display: 'flex', gap: 24, marginTop: 48, flexWrap: 'wrap' }}>
-            {['Zero bank account needed', 'SMS in Kwacha', '0.5% only', 'Works offline-friendly'].map((b, i) => (
+            {['No bank account needed', 'Direct to your wallet', '0.5% only', 'Works offline-friendly'].map((b, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="7" fill="rgba(247,147,26,0.15)" /><path d="M4.5 7l1.8 1.8L9.5 5" stroke="#F7931A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 <span style={{ fontSize: 13, color: 'var(--gray-500)', fontWeight: 500 }}>{b}</span>
@@ -254,9 +254,9 @@ export default function Home() {
                 desc: 'Far lower than card terminals or mobile money. Keep more of every sale you make.',
               },
               {
-                icon: '🏦',
-                title: 'No Bank Needed',
-                desc: 'Accept payments and store funds without a bank account. Withdraw to your Lightning wallet anytime.',
+                icon: '💸',
+                title: 'Direct to Your Wallet',
+                desc: 'Payments go straight to your Lightning wallet. No storing funds with us. You control your money.',
               },
               {
                 icon: '🇿🇲',
@@ -288,26 +288,30 @@ export default function Home() {
           <div style={{ marginBottom: 64, textAlign: 'center' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.1em', color: 'var(--orange)', textTransform: 'uppercase', marginBottom: 12 }}>Simple Process</p>
             <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(28px, 4vw, 44px)', letterSpacing: '-0.03em', color: 'var(--white)', lineHeight: 1.1 }}>
-              Set up in minutes
+              Start accepting in minutes
             </h2>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 2 }}>
             {[
-              { step: '01', title: 'Register Your Shop', desc: 'Sign up with your shop name and phone number. Takes 2 minutes.' },
+              { step: '01', title: 'Register Your Shop', desc: 'Sign up with your shop name and Lightning wallet address. Takes 2 minutes.' },
               { step: '02', title: 'Open the App', desc: 'Access ZamPOS from any browser. No installation needed.' },
               { step: '03', title: 'Enter Amount', desc: 'Type the price in Kwacha. We convert to sats automatically.' },
               { step: '04', title: 'Customer Scans', desc: 'Show the QR code. Customer pays with any Lightning wallet.' },
-              { step: '05', title: 'Get Paid', desc: 'Instant confirmation on screen and SMS to your phone.' },
-              { step: '06', title: 'Withdraw Anytime', desc: 'Send your balance to your Lightning wallet whenever you want.' },
+              { step: '05', title: 'Get Paid Directly', desc: 'Sats go straight to your wallet. Instant confirmation on screen and SMS.' },
+              { step: '06', title: 'Coming Soon', desc: 'Custodial wallets, auto withdrawals, and more features on the way! 🔜', coming: true },
             ].map((s, i) => (
               <div key={i} style={{
                 padding: '32px 24px',
                 background: i === 0 ? 'rgba(247,147,26,0.1)' : 'transparent',
                 borderLeft: i === 0 ? '2px solid var(--orange)' : '1px solid rgba(255,255,255,0.06)',
+                opacity: s.coming ? 0.7 : 1,
               }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--orange)', letterSpacing: '0.08em', marginBottom: 16 }}>{s.step}</p>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 17, color: 'var(--white)', marginBottom: 10 }}>{s.title}</h3>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 17, color: 'var(--white)', marginBottom: 10 }}>
+                  {s.title}
+                  {s.coming && <span style={{ fontSize: 10, marginLeft: 8, background: 'rgba(247,147,26,0.2)', padding: '2px 6px', borderRadius: 20 }}>Soon</span>}
+                </h3>
                 <p style={{ fontSize: 13, lineHeight: 1.65, color: 'rgba(250,250,248,0.45)' }}>{s.desc}</p>
               </div>
             ))}

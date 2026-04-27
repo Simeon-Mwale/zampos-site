@@ -4,14 +4,15 @@ import Nav from './Nav'
 import Footer from './Footer'
 
 const faqs = [
-  { q: 'How do I get started with ZamPOS?', a: "Click 'Start Selling' on the homepage and register with your shop name and phone number. It takes less than 2 minutes and you're ready to accept payments." },
-  { q: 'Do I need a bank account?', a: 'No! ZamPOS works without a bank account. You can accept payments and store them in your ZamPOS balance, then withdraw to a Lightning wallet anytime.' },
-  { q: 'What is a Lightning wallet?', a: "A Lightning wallet lets you send and receive Bitcoin instantly. We recommend Wallet of Satoshi, Blink, or Phoenix Wallet — all free and available on Android and iOS." },
+  { q: 'How do I get started with ZamPOS?', a: "Click 'Start Selling' on the homepage and register with your shop name, phone number, and Lightning wallet address. It takes less than 2 minutes and you're ready to accept payments directly to your wallet." },
+  { q: 'Do I need a bank account?', a: 'No! ZamPOS works without a bank account. Payments go directly to your Lightning wallet. You control your funds instantly.' },
+  { q: 'What is a Lightning wallet?', a: "A Lightning wallet lets you send and receive Bitcoin instantly. We recommend Breez, Wallet of Satoshi, or Phoenix Wallet — all free and available on Android and iOS." },
   { q: 'What are the fees?', a: 'ZamPOS charges 0.5% on each transaction. There are no monthly fees, no signup fees, and no hidden charges.' },
   { q: 'How does the SMS confirmation work?', a: "When a customer pays, you receive an SMS on your phone with the amount paid in Kwacha. This works even if you don't have mobile internet at that moment." },
-  { q: 'How do I withdraw my funds?', a: "Go to your ZamPOS dashboard, tap 'Withdraw', enter your Lightning wallet address (like a Lightning Address or LNURL), and your funds arrive instantly." },
+  { q: 'Where are my funds stored?', a: "Funds go directly to your Lightning wallet. ZamPOS never holds or stores your money — you have full control at all times." },
   { q: 'What if the customer has a bad internet connection?', a: 'The QR code is generated on your device and can be displayed even offline. The customer pays from their wallet and you get confirmation once the payment settles.' },
-  { q: "What if I don't have a Lightning wallet yet?", a: "Use ZamPOS's custodial mode — your funds are held safely in your ZamPOS balance. You can set up a wallet later and withdraw at any time." },
+  { q: 'What if I don\'t have a Lightning wallet yet?', a: "Set up a free Lightning wallet first — we recommend Breez or Wallet of Satoshi. Then register with your wallet address to start accepting payments." },
+  { q: 'Are there withdrawal fees?', a: 'No. Since payments go directly to your wallet, there are no withdrawal fees. Your sats are yours instantly.' },
 ]
 
 function FAQ({ q, a }: { q: string; a: string }) {
@@ -50,7 +51,7 @@ export default function Support() {
     <>
       <Head>
         <title>Support — ZamPOS</title>
-        <meta name="description" content="Get help with ZamPOS. Contact support, browse FAQs, and find answers to common questions." />
+        <meta name="description" content="Get help with ZamPOS. Contact support, browse FAQs, and find answers about direct Lightning payments." />
       </Head>
 
       <Nav />
@@ -69,9 +70,9 @@ export default function Support() {
       <section style={{ padding: '0 24px 60px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
           {[
-            { icon: '✉️', label: 'Email', value: 'simeonmwale100@gmail.com', sub: 'Reply within 24 hours', href: 'mailto:simeonmwale100@gmail.com' },
+            { icon: '✉️', label: 'Email', value: 'support@zampos.com', sub: 'Reply within 24 hours', href: 'mailto:support@zampos.com' },
             { icon: '✈️', label: 'Telegram', value: '@ZedSats', sub: 'Fastest response', href: 'https://t.me/ZedSats' },
-            { icon: '📞', label: 'Call / WhatsApp', value: '+260 978 511 578', sub: 'Mon–Sat, 8am–6pm CAT', href: 'tel:+260978511578' },
+            { icon: '💬', label: 'WhatsApp', value: '+260 XXX XXX XXX', sub: 'Mon–Sat, 8am–6pm CAT', href: 'https://wa.me/260XXX' },
           ].map(c => (
             <a key={c.label} href={c.href} style={{
               padding: '24px', borderRadius: 14, border: '1px solid rgba(12,12,12,0.08)',

@@ -17,7 +17,7 @@ const posts = [
   {
     id: 2,
     title: 'How to Set Up Your Lightning Wallet in 5 Minutes',
-    excerpt: 'A step-by-step guide to getting your first Bitcoin Lightning wallet — recommended options for Zambian users including Wallet of Satoshi and Blink.',
+    excerpt: 'A step-by-step guide to getting your first Bitcoin Lightning wallet — recommended options for Zambian users including Breez, Wallet of Satoshi, and Phoenix.',
     date: 'April 10, 2026',
     author: 'Simeon Mwale',
     readTime: '4 min read',
@@ -27,7 +27,7 @@ const posts = [
   {
     id: 3,
     title: 'Why Zambian Merchants Are Switching to Bitcoin',
-    excerpt: "From Lusaka's markets to tuck shops in the copperbelt — how ZamPOS is helping small businesses cut fees and get paid faster.",
+    excerpt: "From Lusaka's markets to tuck shops in the copperbelt — how ZamPOS is helping small businesses cut fees and get paid directly to their wallets.",
     date: 'April 5, 2026',
     author: 'Community Team',
     readTime: '6 min read',
@@ -46,8 +46,8 @@ const posts = [
   },
   {
     id: 5,
-    title: 'ZamPOS April Update: SMS Confirmations & Custodial Balances',
-    excerpt: 'What we shipped this month: SMS payment alerts via Africa\'s Talking, custodial balance mode for merchants without wallets, and more.',
+    title: 'ZamPOS April Update: SMS Confirmations & New Features',
+    excerpt: 'What we shipped this month: SMS payment alerts via Africa\'s Talking, improved rate stability, and more. Custodial wallets coming soon!',
     date: 'March 20, 2026',
     author: 'Simeon Mwale',
     readTime: '3 min read',
@@ -70,8 +70,9 @@ export default function Blog() {
   return (
     <>
       <Head>
-        <title>Blog — ZamPOS</title>
-        <meta name="description" content="News, tutorials, and stories about Bitcoin Lightning payments in Zambia." />
+        <title>Blog — ZamPOS | Bitcoin Education & Zambia Stories</title>
+        <meta name="description" content="News, tutorials, and stories about Bitcoin Lightning payments for Zambian merchants. Learn how to accept Bitcoin directly to your wallet." />
+        <meta name="keywords" content="ZamPOS blog, Bitcoin Zambia, Lightning tutorials, merchant education" />
       </Head>
 
       <Nav />

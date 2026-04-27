@@ -14,13 +14,13 @@ export default function Terms() {
 
         {[
           { title: '1. Acceptance of Terms', body: 'By accessing or using ZamPOS, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.' },
-          { title: '2. Service Description', body: 'ZamPOS provides a Bitcoin Lightning point-of-sale system for merchants in Zambia. We facilitate Bitcoin Lightning payments and provide SMS confirmation services.' },
-          { title: '3. Merchant Accounts', body: 'To use ZamPOS as a merchant, you must register with a valid phone number. You are responsible for maintaining the security of your account credentials.' },
-          { title: '4. Transaction Fees', body: 'ZamPOS charges a 0.5% fee on each completed transaction. This fee is automatically deducted from the payment amount received.' },
-          { title: '5. Bitcoin and Volatility', body: 'Bitcoin is a volatile asset. Exchange rates between Bitcoin (sats) and Zambian Kwacha (ZMW) fluctuate. ZamPOS is not responsible for exchange rate changes during or after a transaction.' },
-          { title: '6. Withdrawals', body: 'Merchants may withdraw funds to a valid Lightning wallet address at any time. ZamPOS is not responsible for funds sent to incorrect wallet addresses.' },
+          { title: '2. Service Description', body: 'ZamPOS provides a Bitcoin Lightning point-of-sale system for merchants in Zambia. We facilitate direct Bitcoin Lightning payments between customers and merchants. ZamPOS never holds or stores merchant funds.' },
+          { title: '3. Merchant Accounts', body: 'To use ZamPOS, you must register with a valid phone number and Lightning wallet address. You are responsible for maintaining the security of your Lightning wallet.' },
+          { title: '4. Transaction Fees', body: 'ZamPOS charges a 0.5% fee on each completed transaction. This fee is collected from the payment amount before it reaches your wallet.' },
+          { title: '5. Bitcoin and Volatility', body: 'Bitcoin is a volatile asset. Exchange rates between Bitcoin (sats) and Zambian Kwacha (ZMW) fluctuate at the time of transaction. ZamPOS is not responsible for exchange rate changes after payment completion.' },
+          { title: '6. Direct Payments', body: 'All payments go directly from customer to your Lightning wallet. ZamPOS acts only as a facilitator and does not hold, store, or control your funds at any time.' },
           { title: '7. Prohibited Use', body: 'You may not use ZamPOS for illegal activities, money laundering, or any activity prohibited under Zambian law. We reserve the right to suspend accounts that violate these terms.' },
-          { title: '8. Limitation of Liability', body: 'ZamPOS is provided "as is." We make no warranties about uninterrupted service. Our liability is limited to the transaction fees collected in the 30 days prior to any claim.' },
+          { title: '8. Limitation of Liability', body: 'ZamPOS is provided "as is." We make no warranties about uninterrupted service. Our liability is limited to the transaction fees collected from your qualifying transactions.' },
           { title: '9. Changes to Terms', body: 'We may update these terms from time to time. Continued use of ZamPOS after changes are posted constitutes acceptance of the updated terms.' },
           { title: '10. Contact', body: 'For questions about these Terms, contact us at support@zampos.com.' },
         ].map((s, i) => (
